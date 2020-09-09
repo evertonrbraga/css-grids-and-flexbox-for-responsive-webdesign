@@ -5,39 +5,139 @@ html {
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 body {
-	font-family: Arial, Geneva, sans-serif;
+  font-family: Arial, Geneva, sans-serif;
 }
 a {
-	color: #2772B0;
+  color: #2772b0;
 }
 .wrapper {
-	width: 97%;
-	max-width: 1200px;
-	margin: 0 auto;
-	float: none;
-	background-color: #fff;
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fff;
+  width: 100%;
 }
 
 div img {
-	width: 100%;
-	max-width: 225px; 
+  width: 100%;
+  max-width: 225px;
+}
+
+.wrapper div:nth-child(1) article:nth-child(1) {
+  background: greenyellow;
+  float: left;
+  width: 25%;
+}
+.wrapper div:nth-child(1) article:nth-child(2) {
+  background: greenyellow;
+  float: left;
+  width: 25%;
+}
+.wrapper div:nth-child(1) article:nth-child(3) {
+  background: greenyellow;
+  float: left;
+  width: 25%;
+}
+.wrapper div:nth-child(1) article:nth-child(4) {
+  background: greenyellow;
+  float: left;
+  width: 25%;
+}
+
+.wrapper div:nth-child(2) article:nth-child(1) {
+  background: cyan;
+  float: right;
+  width: 100%;
+}
+
+.wrapper div:nth-child(2) article:nth-child(2) {
+  background: cyan;
+  float: right;
+  width: 100%;
+}
+
+.wrapper div:nth-child(3) article:nth-child(1) {
+  background: pink;
+  float: left;
+  width: 30%;
+}
+
+.wrapper div:nth-child(3) article:nth-child(2) {
+  background: pink;
+  float: right;
+  width: 70%;
+}
+
+.wrapper div:nth-child(4) article:nth-child(1) {
+  background: orange;
+  width: 100%;
 }
 
 /* grid system -- mobile first! */
 
+/* Desktop screen Sizes */
+@media only screen and (max-width: 768px) {
+  .wrapper div:nth-child(1) article:nth-child(1) {
+    float: left;
+    width: 50%;
+  }
+  .wrapper div:nth-child(1) article:nth-child(2) {
+    float: right;
+    width: 50%;
+  }
+  .wrapper div:nth-child(1) article:nth-child(3) {
+    float: left;
+    width: 50%;
+  }
+  .wrapper div:nth-child(1) article:nth-child(4) {
+    float: right;
+    width: 50%;
+  }
+
+  .wrapper div:nth-child(2) article:nth-child(1) {
+    float: right;
+    width: 50%;
+  }
+
+  .wrapper div:nth-child(2) article:nth-child(2) {
+    float: right;
+    width: 50%;
+  }
+
+  .wrapper div:nth-child(3) article:nth-child(1) {
+    float: left;
+    width: 50%;
+  }
+
+  .wrapper div:nth-child(3) article:nth-child(2) {
+    float: right;
+    width: 50%;
+  }
+
+  .wrapper div:nth-child(4) article:nth-child(1) {
+    width: 100%;
+  }
+}
 
 /* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
-
-}
-/* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
-
+@media only screen and (max-width: 480px) {
+  .wrapper div:nth-child(1) article:nth-child(1),
+  .wrapper div:nth-child(1) article:nth-child(2),
+  .wrapper div:nth-child(1) article:nth-child(3),
+  .wrapper div:nth-child(1) article:nth-child(4),
+  .wrapper div:nth-child(2) article:nth-child(1),
+  .wrapper div:nth-child(2) article:nth-child(2),
+  .wrapper div:nth-child(3) article:nth-child(1),
+  .wrapper div:nth-child(3) article:nth-child(2),
+  .wrapper div:nth-child(4) {
+    width: 100%;
+  }
 }
